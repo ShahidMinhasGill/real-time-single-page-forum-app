@@ -19,7 +19,7 @@ class CreateRepliesTable extends Migration
             $table->integer('question_id')->unsigned();
             $table->integer('user_id')->nullable();
 
-            $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
+//            $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
             $table->timestamps();
         });
     }
