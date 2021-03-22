@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\CategoryResource;
 use App\Model\Category;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,7 +16,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return Category::latest()->get();
+        return CategoryResource::collection(Category::latest()->get());
     }
 
 
@@ -29,7 +30,7 @@ class CategoryController extends Controller
     {
         $category =  new Category();
         $category->name = $request->name;
-        $category->slug = $request->slug;
+        $category->slug = $request->name;
         $category->save();
         return response('Created',Response::HTTP_CREATED);
     }
@@ -42,7 +43,7 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        return $category;
+        return new CategoryResource($category);
     }
 
     /**
