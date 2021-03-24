@@ -12,7 +12,7 @@
     import AppFooter from './AppFooter';
     import login from './login/Login';
 export default {
-components:{toolbar,AppFooter,login}
+components:{toolbar,AppFooter}
 }
 </script>
 <style></style>
