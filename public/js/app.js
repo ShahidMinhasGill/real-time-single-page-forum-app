@@ -2303,7 +2303,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['data']
 });
@@ -2410,6 +2409,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2465,6 +2466,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Helpers_User__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Helpers/User */ "./resources/js/Helpers/User.js");
+//
+//
 //
 //
 //
@@ -57536,6 +57539,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-card",
+    { staticClass: "m" },
     [
       _c("v-card-title", { attrs: { "primary-title": "" } }, [
         _c(
@@ -57558,7 +57562,7 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("v-card-text", [
-        _vm._v("\n       " + _vm._s(_vm.data.body) + "\n    ")
+        _vm._v("\n        " + _vm._s(_vm.data.body) + "\n    ")
       ])
     ],
     1
@@ -57657,7 +57661,7 @@ var render = function() {
           }),
           _vm._v(" "),
           _c("v-btn", { attrs: { color: "green", type: "submit" } }, [
-            _vm._v("Login")
+            _vm._v("Login\n        ")
           ]),
           _vm._v(" "),
           _c(
@@ -57665,7 +57669,7 @@ var render = function() {
             { attrs: { to: "/signup" } },
             [
               _c("v-btn", { attrs: { color: "green", type: "submit" } }, [
-                _vm._v("SignUp")
+                _vm._v("SignUp\n            ")
               ])
             ],
             1
@@ -57800,7 +57804,7 @@ var render = function() {
           }),
           _vm._v(" "),
           _c("v-btn", { attrs: { color: "green", type: "submit" } }, [
-            _vm._v("SignUp")
+            _vm._v("SignUp\n        ")
           ]),
           _vm._v(" "),
           _c(
@@ -57808,7 +57812,7 @@ var render = function() {
             { attrs: { to: "/login" } },
             [
               _c("v-btn", { attrs: { color: "green", type: "submit" } }, [
-                _vm._v("Login")
+                _vm._v("Login\n            ")
               ])
             ],
             1

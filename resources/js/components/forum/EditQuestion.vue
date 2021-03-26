@@ -9,9 +9,9 @@
                 <vue-simplemde v-model="form.body" ref="markdownEditor"/>
                 <v-card-actions>
                     <v-btn icon small
-                    type="submit"
+                           type="submit"
                     >
-                       <v-icon>save</v-icon>
+                        <v-icon>save</v-icon>
                     </v-btn>
 
                     <v-btn icon small @click="cancel">
@@ -27,26 +27,26 @@
 </template>
 <script>
     export default {
-        props:['data'],
-           data(){
-               return {
-                   form:{
-                       title:null,
-                       body:null
-                   }
+        props: ['data'],
+        data() {
+            return {
+                form: {
+                    title: null,
+                    body: null
+                }
 
-               }
-           },
+            }
+        },
 
-        created(){
+        created() {
             this.form = this.data
         },
-        methods:{
-            cancel(){
+        methods: {
+            cancel() {
                 return EventBus.$emit('cancelingEditin')
             },
-            update(){
-                axios.patch(`/api/question/${this.form.slug}`,this.form)
+            update() {
+                axios.patch(`/api/question/${this.form.slug}`, this.form)
                     .then(res => this.cancel())
             }
         }

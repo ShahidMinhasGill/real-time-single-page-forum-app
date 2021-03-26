@@ -17,13 +17,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('/question','QuestionController');
-Route::resource('/category','CategoryController');
+Route::resource('/question', 'QuestionController');
+Route::resource('/category', 'CategoryController');
 
-Route::resource('/question/{question}/reply','ReplyController');
+Route::resource('/question/{question}/reply', 'ReplyController');
 
-Route::post('/like/{reply}','LikeController@likeIt');
-Route::delete('/like/{reply}','LikeController@unLike');
+Route::post('/like/{reply}', 'LikeController@likeIt');
+Route::delete('/like/{reply}', 'LikeController@unLike');
 
 Route::group([
 

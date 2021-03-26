@@ -17,11 +17,12 @@ class LikeController extends Controller
     {
         $this->middleware('jwt');
     }
+
     public function likeIt(Reply $reply)
     {
         $reply->like()->create([
 //         'user_id'=>auth()->id(),
-        'user_id'=>'1'
+            'user_id' => '1'
         ]);
     }
 
@@ -29,6 +30,6 @@ class LikeController extends Controller
     {
 
 //       $reply->like()->where(['user_id'=>auth()->id()])->delete();
-       $reply->like()->where('user_id','1')->delete();
+        $reply->like()->where('user_id', '1')->delete();
     }
 }

@@ -14,9 +14,10 @@
 <script>
     import ShowQuestion from './ShowQuestion'
     import EditQuestion from './EditQuestion'
+
     export default {
 
-        components:{ShowQuestion,EditQuestion},
+        components: {ShowQuestion, EditQuestion},
         data() {
             return {
                 question: null,
@@ -34,10 +35,10 @@
             },
 
             listen() {
-                EventBus.$on('startEditing',()=>{
+                EventBus.$on('startEditing', () => {
                     this.editing = true
                 })
-                EventBus.$on('cancelingEditin',()=>{
+                EventBus.$on('cancelingEditin', () => {
                     this.editing = false
                 })
             }

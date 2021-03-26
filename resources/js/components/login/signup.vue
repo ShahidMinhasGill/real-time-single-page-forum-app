@@ -21,16 +21,18 @@
                     label="Confirm Password"
             ></v-text-field>
 
-                <v-btn
-                        color="green"
-                        type="submit"
-                >SignUp</v-btn>
+            <v-btn
+                    color="green"
+                    type="submit"
+            >SignUp
+            </v-btn>
 
             <router-link to="/login">
                 <v-btn
                         color="green"
                         type="submit"
-                >Login</v-btn>
+                >Login
+                </v-btn>
             </router-link>
         </v-form>
 
@@ -41,28 +43,28 @@
 
     export default {
 
-        data(){
+        data() {
             return {
-                form:{
-                    name:null,
-                    email:null,
-                    password:null,
-                    password_confirmation:null
+                form: {
+                    name: null,
+                    email: null,
+                    password: null,
+                    password_confirmation: null
                 },
-                errors:{},
+                errors: {},
             }
 
         },
-        created(){
-            if (User.loggedIn()){
+        created() {
+            if (User.loggedIn()) {
                 this.$router.push('forum')
             }
         },
-        methods:{
-            signup(){
-               axios.post('/api/auth/signup',this.form)
-                   .then(res => User.responseAfterLogin(res))
-                   .catch(error => this.errors = error.response.data.errors)
+        methods: {
+            signup() {
+                axios.post('/api/auth/signup', this.form)
+                    .then(res => User.responseAfterLogin(res))
+                    .catch(error => this.errors = error.response.data.errors)
                 this.$router.push('forum')
             }
         }

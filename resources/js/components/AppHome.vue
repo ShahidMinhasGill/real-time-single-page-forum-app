@@ -11,8 +11,9 @@
     import toolbar from './Toolbar';
     import AppFooter from './AppFooter';
     import login from './login/Login';
-export default {
-components:{toolbar,AppFooter}
-}
+
+    export default {
+        components: {toolbar, AppFooter}
+    }
 </script>
 <style></style>

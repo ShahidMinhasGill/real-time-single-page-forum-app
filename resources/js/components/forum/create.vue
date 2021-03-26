@@ -34,28 +34,28 @@
 <script>
     export default {
 
-      data(){
-          return {
-              form:{
-                  title:null,
-                  category_id:null,
-                  body:null,
+        data() {
+            return {
+                form: {
+                    title: null,
+                    category_id: null,
+                    body: null,
 
-              },
-              categories:{},
-              errors:{}
-          }
-      },
-        created(){
+                },
+                categories: {},
+                errors: {}
+            }
+        },
+        created() {
             axios.get('/api/category')
                 .then(response => this.categories = response.data.data)
         },
-        methods:{
-        create(){
-              axios.post('/api/question',this.form)
-                  .then(res => this.$router.push(res.data.path))
-                  .catch(error => this.errors =  error.response.data.error)
-        }
+        methods: {
+            create() {
+                axios.post('/api/question', this.form)
+                    .then(res => this.$router.push(res.data.path))
+                    .catch(error => this.errors = error.response.data.error)
+            }
         }
     }
 </script>

@@ -17,8 +17,10 @@ import 'simplemde/dist/simplemde.min.css'
 
 Vue.component('vue-simplemde', VueSimplemde)
 import md from 'marked'
+
 window.md = md
 import User from './Helpers/User';
+
 window.User = User
 
 window.EventBus = new Vue();
@@ -41,8 +43,9 @@ Vue.component('AppHome', require('./components/AppHome.vue').default);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 import router from './Router/router.js'
+
 const app = new Vue({
     el: '#app',
     router,
-    vuetify : new Vuetify(),
+    vuetify: new Vuetify(),
 });
