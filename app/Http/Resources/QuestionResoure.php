@@ -19,6 +19,8 @@ class QuestionResoure extends JsonResource
           'user_id'=>$this->user_id,
           'title'=>$this->title,
           'slug'=>$this->slug,
+          'reply'=>ReplyResource::collection($this->replies),
+          'reply_count'=>$this->replies->count(),
           'body'=>$this->body,
           'user'=>$this->user->name,
           'path'=>$this->path,

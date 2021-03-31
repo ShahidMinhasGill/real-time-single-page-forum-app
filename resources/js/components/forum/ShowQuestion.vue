@@ -10,7 +10,7 @@
                     <span>{{data.user}} Said {{data.created_at}}</span>
                 </div>
                 <v-spacer></v-spacer>
-                <v-btn>5 replies</v-btn>
+                <v-btn>{{data.reply_count}} replies</v-btn>
             </v-card-title>
             <v-card-text v-html="body"></v-card-text>
             <v-card-actions v-if="own">

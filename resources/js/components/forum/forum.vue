@@ -10,16 +10,19 @@
                 >
                 </question>
             </v-flex>
-            sidebar
+            <v-flex xs4>
+                <sidebar></sidebar>
+            </v-flex>
         </v-layout>
     </v-container>
 </template>
 <script>
 
     import question from './question'
+    import Sidebar from './AppSideBar'
 
     export default {
-        components: {question},
+        components: {question, Sidebar},
         data() {
             return {
                 questions: {}
